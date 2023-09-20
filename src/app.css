@@ -1,0 +1,349 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f8f9fa;
+  color: #343a40;
+  margin: 0;
+  padding: 0;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem 2rem;
+  background-color: rgb(233, 236, 239); 
+  min-height: 40px; 
+  margin-bottom: 1rem;
+  color: rgb(33, 37, 41); 
+  direction: rtl;
+}
+
+.header a {
+  color: rgb(33, 37, 41); 
+  text-decoration: none;
+  font-size: 1rem; 
+  margin: 0 1rem; 
+  transition: color 0.3s; 
+}
+
+.header a:hover {
+  color: rgb(52, 58, 64); 
+}
+
+.header-title {
+  font-weight: 700; 
+  font-size: 1.2rem; 
+}
+
+.header-subtitle {
+  font-size: 0.9rem; 
+}
+
+@media (max-width: 600px) {
+  .header {
+    flex-direction: column; 
+    align-items: flex-start; 
+    padding: 0.5rem 1rem; 
+  }
+
+  .header a, .header-title, .header-subtitle {
+    margin-bottom: 0.5rem; 
+  }
+}
+
+.container {
+  margin: auto;
+  padding: 1rem;
+  width: 100%;
+  clear: both;
+}
+
+#hits {
+  margin: 0 auto;
+  padding: 0 1rem;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.search-panel {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.search-panel__filters {
+  flex: 1;
+}
+
+.search-panel__results {
+  flex: 3;
+}
+
+.ais-Highlight-highlighted {
+  color: inherit;
+  font-size: inherit;
+}
+
+#searchbox {
+  margin-bottom: 2rem;
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+  border: 1px solid #ccc; 
+  width: 100%; 
+  box-sizing: border-box;
+}
+
+#pagination {
+  margin: 2rem auto;
+  text-align: center;
+}
+
+@media(min-width: 600px) { 
+  .search-panel {
+    flex-direction: row;
+  }
+}
+
+.search-hit {
+  background-color: #ffffff;
+  border-radius: 0.75rem;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  width: 100%;
+  box-sizing: border-box;
+  box-shadow: 0 0.125rem 0.3125rem rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s;
+}
+
+.search-hit:hover {
+  transform: translateY(-0.3125rem);
+}
+
+.search-hit-header {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-bottom: 1rem;
+}
+
+.search-hit-header img {
+  margin-right: auto;
+  margin-left: auto;
+  max-width: 100%;
+  height: auto;
+}
+
+.search-hit-avatar {
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  margin-bottom: 1rem;
+  object-fit: cover;
+}
+
+.search-hit-info {
+  flex-grow: 1;
+  margin-inline-start: 0.5rem;
+}
+
+.search-hit-title {
+  text-align: start;
+  direction: rtl;
+  margin: 0;
+  font-size: 1.5rem;
+  line-height: 1.4;
+  color: #343a40;
+}
+
+.search-hit-link {
+  text-decoration: none;
+  color: #007bff;
+}
+
+.search-hit-meta {
+  margin: 0.3125rem 0 0 0;
+  color: #6c757d;
+  font-size: 0.9rem;
+  text-align: right;
+  direction: rtl;
+}
+
+.search-hit-content {
+  margin-bottom: 1rem;
+}
+
+.search-hit-text {
+  margin: 0;
+  color: #343a40;
+  line-height: 1.6;
+  text-align: right;
+  direction: rtl;
+}
+
+.search-hit-footer {
+  display: flex;
+  direction: rtl;
+  flex-direction: column;
+  align-items: flex-start;
+  border-top: 1px solid #e9ecef;
+  padding-top: 0.5rem;
+}
+
+.search-hit-category {
+  display: flex;
+  flex-grow: 1;
+  direction: rtl;
+  text-align: right;
+  margin-bottom: 0.5rem;
+  color: #6c757d;
+  width: 10rem;
+}
+
+.search-hit-tags {
+  direction: rtl;
+  text-align: right;
+  flex-grow: 2;
+  color: #6c757d;
+  margin-bottom: 0.5rem;
+}
+
+.search-hit-tags a {
+  text-decoration: none;
+  color: #007bff;
+}
+
+.search-hit-tags span {
+  background-color: #e9ecef;
+  padding: 0.125rem 0.5rem;
+  border-radius: 0.9375rem;
+  margin: 0 0.25rem 0.25rem 0;
+  display: inline-block;
+}
+
+.search-hit-read-more {
+  text-align: left;
+  margin-inline-end: 0.5rem;
+}
+
+.search-hit-link {
+  text-decoration: none;
+  color: #007bff;
+}
+
+#pagination {
+  margin: 2rem auto;
+  display: flex;
+  justify-content: space-around; 
+  flex-wrap: wrap; 
+}
+
+.ais-Pagination-link {
+  font-size: 0.75rem; 
+  padding: 0 0.5rem;
+  flex: 1; 
+  text-align: center; 
+  margin: 0.5rem 0; 
+}
+
+@media(min-width: 600px) {
+  .ais-Pagination-link {
+    font-size: 0.875rem;
+    padding: 0 0.75rem;
+  }
+}
+
+@media(min-width: 900px) {
+  .ais-Pagination-link {
+    font-size: 1rem;
+    padding: 0 1rem;
+  }
+}
+
+@media(min-width: 37.5rem) {
+  .search-hit-header, .search-hit-footer {
+    direction: rtl;
+    text-align: right;
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .search-hit-avatar {
+    margin-bottom: 0;
+    margin-right: 1rem;
+  }
+  
+  .search-hit-category {
+    margin-right: 0.5rem;
+    margin-bottom: 0;
+  }
+  
+  .search-hit-tags {
+    margin-bottom: 0;
+  }
+}
+
+.ais-SearchBox-form::before, .ais-SearchBox-form::before {
+  background: initial;
+  top: initial;
+  width: initial;
+  height: initial;
+  margin-top: initial;
+  position: initial;
+  content: initial;
+  left: initial;
+}
+
+.ais-SearchBox-form::after {
+  background: transparent url(data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2024%2024%22%20fill%3D%22none%22%20stroke%3D%22%235a5e9a%22%20stroke-width%3D%222%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%3E%3Ccircle%20cx%3D%2211%22%20cy%3D%2211%22%20r%3D%228%22%3E%3C%2Fcircle%3E%3Cline%20x1%3D%2221%22%20y1%3D%2221%22%20x2%3D%2216.65%22%20y2%3D%2216.65%22%3E%3C%2Fline%3E%3C%2Fsvg%3E) repeat scroll 0 0;
+  content: "";
+  height: 1rem;
+  right: 1rem;
+  margin-top: -0.5rem;
+  position: absolute;
+  top: 50%;
+  width: 1rem;
+}
+
+.ais-SearchBox-form {
+  direction: rtl;
+}
+
+.ais-SearchBox-form .ais-SearchBox-input {
+  text-align: right;
+  padding-right: 2.5rem !important;
+  padding-left: 0 !important;
+}
+
+.ais-SearchBox-submit, .ais-SearchBox-reset {
+  order: -1;
+  left: 1rem !important;
+}
+
+.ais-SearchBox-reset {
+  margin-right: auto; 
+}
+
+.ais-RefinementList-list {
+  direction: rtl;
+  text-align: right;
+}
+
+.ais-GeoSearch-input, .ais-RefinementList-checkbox {
+  margin: 0;
+  margin-left: 0.5rem !important;
+  margin-right: 0 !important;
+}
+
+.ais-RefinementList-count {
+  margin-right: 0.5rem !important;
+  margin-left: 0 !important;
+}
+
+.ais-Panel-header {
+  direction: rtl;
+  text-align: right;
+}
