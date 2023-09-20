@@ -69,7 +69,7 @@ search.addWidgets([
       item: (hit, { html, components }) => html`
         <article class="search-hit">
           <header class="search-hit-header">
-            <img src="letter_avatar_proxy/v4/letter/o/5f8ce5.png" data-img="https://forums.pythonic.guru${hit.avatar_template}" alt="${hit.display_username}'s avatar" class="search-hit-avatar" />
+            <img src="letter_avatar_proxy/v4/letter/o/5f8ce5/25.png" data-img="https://forums.pythonic.guru${hit.avatar_template}" alt="${hit.display_username}'s avatar" class="search-hit-avatar" />
             <div class="search-hit-info">
               <h2 class="search-hit-title">
                 <a href="${hit.url}" class="search-hit-link">
