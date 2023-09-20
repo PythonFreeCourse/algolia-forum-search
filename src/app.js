@@ -21,8 +21,6 @@ const search = instantsearch({
 
 async function displayFirstAvailableImage(imgElement, imageUrl) {
   const imageUrls = [
-    imageUrl.replace('{size}', '45').replace(".jpg", ".png"),
-    imageUrl.replace('{size}', '45').replace(".png", ".jpg"),
     imageUrl.replace('{size}', '40').replace(".jpg", ".png"),
     imageUrl.replace('{size}', '40').replace(".png", ".jpg"),
     imageUrl.replace('{size}', '25').replace(".jpg", ".png"),
